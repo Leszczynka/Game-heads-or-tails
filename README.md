@@ -7,7 +7,7 @@ Simple game.
 * [Setup](#setup)
 
 ### General info
-This is my first project - the game eagle or heads.
+This is my first project - the game heads or tails.
 The rules of the game are simple.
 The user makes a choice: heads or tails.
 Our opponent is a computer, which randomly chooses heads or tails. 
