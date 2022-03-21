@@ -1,7 +1,7 @@
 import random
 from time import sleep
 
-availableChoices = ["e", "h"]
+availableChoices = ["h", "t"]
 playerPoints = 0
 computerPoints = 0
 print("Let's play a game heads or tails! The winner is the one who gains three points.")
@@ -15,12 +15,11 @@ while True:
     elif computerPoints==3:
         print("The computer won the game.")
         break
-
     else:
-        playerChoice = input("Enter e to choose eagle or h to choice heads: ")
+        playerChoice = input("Enter h to choose heads or t to choice tails: ")
 
-        while playerChoice not in wybor:
-            playerChoice = input("Incorrect input, enter e or h: ")
+        while playerChoice not in availableChoices:
+            playerChoice = input("Incorrect input, enter h or t: ")
 
         toss = random.choice(availableChoices)
         computerChoice = random.choice(availableChoices)
@@ -29,18 +28,17 @@ while True:
             print(i)
             sleep(1)
 
-        print("Computer choice is", wyborKomputera)
+        print("Computer choice is", computerChoice)
         print("Result of the coin toss", toss)
-
 
         if playerChoice == toss and computerChoice == toss:
             playerPoints += 1
             computerPoints += 1
             print("One point for the player and one point for the computer.")
-        elif computerChoice == los:
+        elif computerChoice == toss:
             computerPoints += 1
             print("One point for the computer.")
-        elif playerChoice == los:
+        elif playerChoice == toss:
             playerPoints += 1
             print("One point for the player")
         else:
